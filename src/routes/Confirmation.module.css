@@ -1,0 +1,45 @@
+.response{
+    margin: 20% 5% 25px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.response h1{
+    font-family: 'Asap', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 26pt;
+    text-align: center;
+}
+
+.response p{
+    font-family: 'Varela Round', 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 18pt;
+    font-weight: 600;
+    text-align: center;
+    color: var(--color-name);
+    margin-top: 45px;
+}
+
+.heading{
+    color: rgb(24, 59, 0);
+}
+
+.errorHeading{
+    color: rgb(122, 0, 47);
+}
+
+.return{
+    text-decoration: none;
+    font-size: 22pt;
+    font-family: 'Baloo 2', Geneva, Verdana, sans-serif;
+    padding: 5px 35px;
+    margin: 10% auto;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width:960px) {
+    .response{
+        margin: 25vh 3% 25px 3%;
+    }
+}

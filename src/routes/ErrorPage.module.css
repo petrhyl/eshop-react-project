@@ -1,0 +1,38 @@
+.page {
+    width: 85%;
+    min-height: 100vh;
+    background-color: rgb(245, 242, 219);
+    margin: 0 auto;
+}
+
+.errorBox{
+    padding: 25px;
+}
+
+.warningMessage {
+    color: rgb(206, 36, 73);
+    font-family: 'Gill Sans', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 16pt;
+    font-weight: 600;
+}
+
+
+.leaveBtn{
+        font-size: 16pt;
+        font-weight: 600;
+        font-family: 'Baloo 2', Geneva, Verdana, sans-serif;
+        border: none;
+        outline: none;
+        border-radius: 16px;
+        background-color: rgb(196, 104, 110);
+        box-shadow: 0 0 5px 3px rgb(194, 130, 134) inset;
+        color: antiquewhite;
+    padding: 8px 25px;
+    margin: 20px;
+}
+
+@media (max-width:1100px) {
+    .page{
+        width: 96%;
+    }
+}

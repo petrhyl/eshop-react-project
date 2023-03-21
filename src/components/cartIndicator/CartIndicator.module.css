@@ -1,0 +1,101 @@
+.form {
+    --font-size: 20pt;
+    position: fixed;
+    z-index: 100;
+    top: 25px;
+    right: 10%;
+    width: 280px;
+    height: 90px;
+    background-color: rgb(255, 238, 239);
+    border-radius: 14px;
+    border: 1px solid rgb(209, 206, 188);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+.number {
+    height: 100%;
+    width: 35%;
+    outline: none;
+    border: 1px solid rgb(209, 206, 188);
+    background-color: rgb(229, 252, 252);
+    color: rgb(70, 68, 46);
+    border-radius: 12px;
+    font-size: var(--font-size);
+    font-weight: 700;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    line-height: calc(var(--font-size));
+    padding: 8px 12px 10px 12px;
+    box-sizing: border-box;
+    cursor: default;
+}
+
+.plus {
+    color: rgb(10, 112, 53);
+}
+
+.toCart {
+    width: 50%;
+    height: 100%;
+    font-size: calc(var(--font-size) - 1pt);
+    font-weight: 600;
+    font-family: 'Baloo 2', Geneva, Verdana, sans-serif;
+    border: none;
+    border-radius: 16px;
+    background-color: rgb(199, 107, 113);
+    color: antiquewhite;
+    transition-duration: 150ms;
+}
+
+.toCart:hover {
+    box-shadow: 0 0 5px 3px rgb(199, 107, 113) inset;
+    background-color: rgb(218, 127, 133);
+    font-size: calc(var(--font-size) + 2pt);
+    cursor: pointer;
+}
+
+.toCart:active {
+    box-shadow: 0 0 5px 3px rgb(173, 79, 85) inset;
+    background-color: rgb(207, 126, 131);
+}
+
+
+@media screen and (max-width:1300px) {
+    .form {
+        right: 5%;
+        top: 20px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .form {
+        --font-size: 16pt;
+        top: 10px;
+        right: 3%;
+        width: 180px;
+        height: 56px;
+        border-radius: 14px;
+        padding: 10px 12px;        
+    }
+
+    .toCart {
+        border-radius: 14px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .form {
+        top: 7px;
+        right: 1%;
+        height: 50px;
+        padding: 8px 12px;
+    }
+    
+    .number {
+        padding: 4px 8px 6px 8px;
+    }
+}
+

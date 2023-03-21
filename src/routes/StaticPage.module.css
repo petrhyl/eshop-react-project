@@ -1,0 +1,59 @@
+.staticPage {
+    position: relative;
+    width: 80%;
+    margin: 0 auto;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.paddingWithIndicator {
+    padding-top: calc(25px + 90px + 20px);  /* vyska CartIndicator plus odsazeni */
+}
+
+.paddingWithout{
+    padding-top: 25px;
+}
+
+@media screen and (max-width:1300px) {
+    .staticPage {
+        width: 90%;
+    }
+
+    .paddingWithIndicator {
+        padding-top: calc(20px + 90px + 20px);
+    }
+
+    .paddingWithout{
+        padding-top: 20px;
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .staticPage {
+        width: 94%;
+        padding-top: 10px;
+    }
+
+    .paddingWithIndicator {
+        padding-top: calc(10px + 56px + 10px);
+    }
+
+    .paddingWithout{
+        padding-top: 10px;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .staticPage {
+        width: 99%;
+    }
+
+    .paddingWithIndicator {
+        padding-top: calc(7px + 50px + 7px);
+    }
+
+    .paddingWithout{
+        padding-top: 5px;
+    }
+}

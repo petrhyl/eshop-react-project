@@ -1,0 +1,23 @@
+.mainDesign {
+  width: 100%;
+  min-height: calc(90vh - (40px + 90px + 25px));
+  /* margin and width of CartIndicator, margin of this component */
+  background-color: rgb(255, 238, 239);
+  border-radius: 20px;
+  border: 1px solid rgb(209, 206, 188);
+}
+
+.loading{
+  width: 100%;
+  font-size: 16pt;
+  font-weight: 500;
+  text-align: center;
+  color: var(--color-name);
+  margin-top: 15vh;
+}
+
+@media screen and (max-width: 960px) {
+  .mainDesign {
+    border-radius: 12px;
+  }
+}

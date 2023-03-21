@@ -1,0 +1,148 @@
+.itemGrid {
+    --padding: 25px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.125fr 1fr 1fr;
+    grid-template-areas:
+        'back back'
+        'image info'
+        'image desc';
+    padding: calc(var(--padding) - 7px) var(--padding);
+}
+
+.backDiv {
+    grid-area: back;
+    display: flex;
+}
+
+.linkBack {
+    width: fit-content;
+    height: fit-content;
+    text-decoration: none;
+    color: rgb(88, 40, 68);
+    font-size: 16pt;
+    font-weight: 600;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.linkBack p {
+    width: fit-content;
+}
+
+.image {
+    grid-area: image;
+}
+
+.info {
+    grid-area: info;
+    padding-left: calc(var(--padding) + 10px);
+}
+
+.info h1 {
+    font-family: 'DynaPuff', 'Lucida Sans', Geneva, Verdana, sans-serif;
+    font-size: 28pt;
+    color: var(--color-name);
+    margin: 20px 0 60px 20px;
+}
+
+.info p {
+    font-size: 15pt;
+    text-align: right;
+    color: rgb(20, 43, 36);
+    margin-right: 8%;
+}
+
+.quantityForm {
+    display: flex;
+    justify-content: space-between;
+    width: 70%;
+    height: 40px;
+    margin: 40px 8% auto auto;
+}
+
+.quantity {
+    width: 120px;
+    height: 100%;
+}
+
+.addButtonSize {
+    font-size: 14pt;
+    padding: 6px 20px;
+}
+
+.desc {
+    grid-area: desc;
+    padding-left: calc(var(--padding) + 10%);
+    padding-right: var(--padding);
+}
+
+.desc p {
+    text-align: justify;
+    font-size: 14pt;
+    font-family: 'Comfortaa', Arial, Helvetica, sans-serif;
+    line-height: 22pt;
+    color: rgb(68, 60, 60);
+}
+
+@media screen and (max-width:960px) {
+    .itemGrid {
+        --padding: 20px;
+    }
+
+    .info h1 {
+        margin: 50px 0 30px 20px;
+    }
+
+    .info p {
+        margin-left: 20px;
+        text-align: left;
+    }
+
+    .quantityForm {
+        width: 98%;
+        margin: 25px 0 auto auto;
+    }
+
+    .quantity {
+        width: 111px;
+        height: 100%;
+    }
+
+    .desc {
+        padding-left: calc(var(--padding));
+        padding-right: 0;
+    }
+
+    .desc p {
+        line-height: 18pt;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .itemGrid {
+        --padding: 17px;
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.1fr 1fr 1fr 0.5fr 1.5fr;
+        grid-template-areas:
+            'back'
+            'image'
+            'image'
+            'info'
+            'desc';
+    }
+
+    .info {
+        padding-left: 0;
+    }
+    
+    .info h1 {
+        margin: 35px 0 25px 20px;
+    }
+
+    .quantityForm {
+        width: 98%;
+        margin: 10px 0 50px auto;
+    }
+
+}
