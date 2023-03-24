@@ -5,6 +5,7 @@ const Carousel = props => {
     const [picIndex, setPicIndex] = useState(0);
     const [picture, setPicture] = useState(props.images[0].fileName);
     const [indicators, setIndicators] = useState([]);
+    const [startPointer, setStartPointer] = useState();
 
     const { images } = props;
 
@@ -24,6 +25,21 @@ const Carousel = props => {
         }
     }
 
+    const handleTouchStart = event => {
+        setStartPointer(event.changedTouches[event.changedTouches.length - 1].screenX);
+    }
+
+    const handleTouchEnd = event => {
+        if ((event.changedTouches[event.changedTouches.length - 1].screenX - startPointer) < - 100) {
+            handleNext();
+            return;
+        }
+
+        if ((event.changedTouches[event.changedTouches.length - 1].screenX - startPointer) > 100) {
+            handlePreview();
+        }
+    }
+
     useEffect(() => {
         const listItems = images.map((img, index) => {
             return (
@@ -39,14 +55,14 @@ const Carousel = props => {
 
     return (
         <div className={cssClass.carousel}>
-            <div className={cssClass.slide}>
+            <div className={cssClass.slide} onTouchStart={handleTouchStart} onTouchEnd={handleTouchEnd}>
                 <img className={cssClass.picture} src={picture} alt="product" />
                 <button className={`${cssClass.slideButton} ${cssClass.preview}`} onClick={handlePreview}>
                     <img src="https://hyl-petr.xf.cz/images/left-arrow-light.png" alt="preview" />
                 </button>
                 <button className={`${cssClass.slideButton} ${cssClass.next}`} onClick={handleNext}>
                     <img src="https://hyl-petr.xf.cz/images/right-arrow-light.png" alt="next" />
-                </button>                
+                </button>
             </div>
             <ul className={cssClass.indicatorBar}>
                 {indicators}

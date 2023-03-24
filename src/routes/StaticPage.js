@@ -15,7 +15,7 @@ const StaticPage = () => {
         const pathObjects = pathname.split('/');
         const lastPathObject = pathObjects[pathObjects.length - 1];
        
-        if (lastPathObject === 'eshop' || /^(\d+)$/.test(lastPathObject)) {
+        if (lastPathObject === 'eshop' || /^(\d+)$/.test(lastPathObject) || lastPathObject === '') {
             setShowIndicator(true);
             setComponentCSS(`${cssClass.staticPage} ${cssClass.paddingWithIndicator}`);
         } else {
