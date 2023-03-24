@@ -11,9 +11,9 @@
 
 ### Pages
 1. "eshop" - all products
-  + a list of items
-  + counter and buttom to add the item to the cart
-  + sticky cart buttom with indicator of amount of items in the cart
+..+ a list of items
+..+ counter and buttom to add the item to the cart
+..+ sticky cart buttom with indicator of amount of items in the cart
 2. "eshop/item/:id" - details of the particular pruduct
   + carousel with item's pictures
   + item's name, price and description
